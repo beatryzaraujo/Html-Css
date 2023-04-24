@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 01</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1 style="text-align: center;">Tudo o que aprendi no primeiro módulo de <ins>HTML5</ins> e <ins>CSS3</ins></h1>
+    <hr>
+    <h2 style="text-align: center;">PARÁGRAFOS</h2>
+    <p>Para iniciar um parágrafo, abrimos a tag &lt;p&gt;</p>
+    <hr>
+
+    <h2 style="text-align: center;">NÍVEIS DE TÍTULOS</h2>
+    <p>Para iniciar um título, abrimos a tag com o nível desejado, que vai de 1 até 6, sendo o &lt;h1&gt; o maior, e o &lt;h6&gt; o menor.</p>
+    <hr>
+
+    <h2 style="text-align: center;">&#x1F60ASINAIS, SÍMBOLOS E EMOJIS&#x1F600</h2>
+    
+    <ol>
+         <li><strong>Sinais</strong></li>
+         <ul>
+            <li>&lt; &gt; Para adicionar o primeiro, sem que virem tag ativa, escrevemos &-lt; e &-gt; para o segundo sinal(sem o hífen).</li>
+         </ul>
+         <li><strong>Símbolos</strong></li>
+         <ul>
+            <li>(Espaço em branco) Para adicionar um espaço em branco, escrevemos &nbs-p; (sem o hífen). Entre outros símbolos que podemos encontrar na internet.</li>
+         </ul>
+         <li><strong>Emojis</strong></li>
+         <ul>
+            <li>&#x1F600 Para adicionar um emoji, escrevemos &#x e adicionamos o código desse emoji. Podemos encontrar diversos códigos de diversos emojis em alguns sites, como o <em>Emojipedia</em></li>
+         </ul>
+    </ol>
+    <hr>
+    
+    <h2 style="text-align: center;"><strong>IMAGEM</strong></h2>
+    <ul>
+        <li><strong>Formatos de imagem</strong></li>
+        <p>Na hora de escolher o formato de imagem, opte sempre pelo formato <strong>JPEG(JPG)</strong> com uma compactação enre 30% a 50%. Já o <strong>PNG</strong>, só usamos quando precisamos de transparência</p>
+        <li><strong>Tamanho de imagem</strong></li>
+        <p>Não salve arquivos gigantes e fique diminuindo o tamanho com código. Seu navegador vai levar um tempo para carregar o arquivo do seu servidor e vai exibir a imagem minúscula na tela.</p> 
+        <li><strong>Tag</strong></li> 
+        <p>Finalmente, para inserirmos uma imagem, abrimos a tag <strong>&lt;img src="" alt=""&gt;</strong>. Colocaremos o arquivo, ou endereço de uma imagem, dentro da primeira aspas. Na segunda, vamos basicamente descrever o contéudo da imagem para acessibilidade de pessoas cegas e também para que o navegador ofereça sua imagem quando buscarem por algo parecido com sua descrição. A imagem ficará assim: </p>
+        <img src="imagens/shopping.jpg" alt="Eu e ele no shopping">   <br>
+        <p>Podendo ser aumentada ou diminuída através do código <strong>width</strong>, assim:</p>    
+        <img src="imagens/shopping.jpg" alt="Eu e ele no shopping só que menor" width="160px">
+    </ul>
+    <hr>
+
+    <h2 style="text-align: center;"><strong>IMAGEM DINÂMICA</strong></h2>
+    <p>Para criar um site, é preciso adaptar o conteúdo para diferentes tpos de telas(cellular, tablet, tv etc.). Poderíamos editar diretamente no código, mas isto não diminuiria os bytes, e aumentaria o consumo deixando o site pesado.</p>
+    <p>Então, de forma mais leve, editaremos 3 imagens iguais(ou mais), porém de dimensões diferentes. Uma tamanho G com 1000px, uma tamanho M com 700px e uma tamanho P com 300px.</p>
+    <p>Abrimos a tag <strong>&lt;picture&gt;</strong> e, dentro dela, colocamos normalmente a tag <strong>&lt;img&gt;</strong> com a maior foto. <em>Exemplo:</em></p>
+    <pre>
+        <code>
+        <strong>
+            &lt;picture&gt;
+                &lt;img src="" alt=""&gt;
+            &lt;/picture&gt;
+        </strong>    
+        </code>
+    </pre>
+<p>Agora, em cima da tag <strong>img</strong>, abrimos a tag <strong>&lt;source media=" (max-width: px)" srcset="" type=""&gt;</strong>, onde dentro do <strong>max-width:</strong> colocaremos o tamanho da maior foto + uns 50/60 a mais, dentro do <strong>srcset</strong> colocaremos o arquivo de uma foto menor que essa, ou seja, a foto média, e dentro do <strong>type</strong> colocaremos o <em>media type</em> da imagem que usamos. Neste caso, <strong>jpg</strong>.</p>
+<p>Ainda, em cima desta ultima tag, podemos adicionar mais um <strong>source</strong>, porém desta vez adicionando um arquivo ainda menor e o número dentro do <strong>width</strong> passar a ser o tamanho da segunda imagem + uns 50/60. <em>Exemplo:</em></p>
+<pre>
+    <code>
+        <strong>
+            &lt;picture&gt;
+                &lt;source media="(max-width: 750px)" srcset="fotopequena.jpg" type="image/jpeg"&gt;
+                &lt;source media="(max-width: 1050px)" srcset="fotomedia.jpg" type="image/jpeg"&gt;
+                &lt;img src="fotograde.jpg" alt"(descrição)"&gt;
+            &lt;picture&gt;
+        </strong>   
+    </code>
+</pre>
+<picture>
+    <source media="(max-width: 750px)" srcset="imagens/fotopequena.png" type="image/png">
+    <source media="(max-width: 1050px)" srcset="imagens/fotomedia.png" type="image/png">
+    <img src="imagens/fotogrande.png" alt="foto grande">
+</picture>
+<hr>
+
+<h2 style="text-align: center;"><strong>ÍCONE/FAVICON</strong></h2>
+<p>(Ao invés de inserirmos esta tag no &lt;body&gt;, inserimos no &lt;head&gt;)</p>
+<p>Para adicionar um ícone na guia do seu site, você tem de ter esta imagem em <strong>ICON, PNG ou SVG</strong>. (Também pode criar seu próprio favicon no site <em>favicon.cc</em> e baixar.)</p>
+Para colocar seu ícon, finalmente, basta arrastar este arquivo para a pasta do seu site e abrir a tag <strong>&lt;link rel="shortcut icon" href="(arquivo)" type="image/x-ico"</strong>
+<p><em>O exemplo é o próprio icon deste site</em></p>
+<hr>
+
+<h2 style="text-align: center;"><strong>SEMÂNTICA/FORMATAÇÃO</strong></h2>
+<ol>
+    <li><strong>Endereços</strong></li>
+    <ul>
+        <li>Para indicar um endereço, coloque ele dentro da tag <strong>&lt;address&gt;</strong>. Ficará assim: <address>Rua Doutor José Alves</address></li>
+    </ul>
+    <li><strong>Negrito</strong></li>
+    <ul>
+        <li>Usamos a tag &lt;strong&gt;. Ficará assim: <strong>Assim</strong></li>
+    </ul>
+    <li><strong>Itálico</strong></li>
+    <ul>
+        <li>Usamos a tag &lt;em&gt;. Ficará assim: <em>Assim</em></li>
+    </ul>
+    <li><strong>Marca Texto</strong></li>
+    <ul>
+        <li>Para destacar uma palavra, usamos a tag &lt;mark&gt;. Ela ficará assim: <mark>Assim</mark>
+        <p>Para mudar a cor, adicione, após mark, <strong>style="background-color: blue"</strong>(com qualquer cor). Ficará <mark style="background-color: blue;">Assim</mark></p>
+        </li>
+    </ul>
+    <li><strong>Grande e Pequeno</strong></li>
+    <ul>
+        <li>Para deixar o texto <strong>grande</strong>, usamos a tag &lt;big&gt;. Ficará <big>Assim</big></li>
+        <li>Para deixar o texto <strong>pequeno</strong>, usamos a tag &lt;small&gt;. Ficará <small>assim</small></li>
+    </ul>
+    <li><strong>Texto Riscado</strong></li>
+    <ul>
+        <li>Para riscar uma palavra, coloque ela dentro da tag &lt;del&gt;. Ela ficará <del>assim</del></li>
+    </ul>
+    <li><strong>Texto Sublinhado</strong></li>
+    <ul>
+        <li>Para sublinhar algo, coloque dentro da tag &lt;ins&gt;. Ela ficará <ins>assim</ins></li>
+    </ul>
+    <li><strong>Texto Sobrescrito e Subscrito</strong></li>
+    <ul>
+        <li>Para elevar uma letra/número, usamos &lt;sup&gt;. Ficará assim: X<sup>2</sup>.</li>
+        <li>Para abaixar, usamos a tag &lt;sub&gt;. FIcará assim: H<sub>2</sub>O</li>
+    </ul>
+    <li><strong>Código-Fonte</strong></li>
+    <ul>
+        <li>Para compartilhar um código, e manter seus espaçamentos, do jeitinho que escrevemos, usamos a tag &lt;pre&gt; e dentro dela usamos a &lt;code&gt;. Ficará assim:</li>
+    </ul>
+    <p>    <pre>
+        <code>
+        <strong>
+            &lt;picture&gt;
+                &lt;img src="" alt=""&gt;
+            &lt;/picture&gt;
+        </strong>    
+        </code>
+    </pre>
+</p>
+    <li><strong>Citações</strong></li>
+    <ul>
+        <li>Para criar uma citação curta, usamos a tag &lt;q&gt;. Ficará assim:</li>
+        <p>
+            Gustavo disse: <q>Nós somos os robôs, e mecanizamos os sentimentos.</q>
+        </p>
+        <li>Para criar uma citação mais longa, usamos a tag &lt;blockquote&gt;. Ficará assim:</li>
+        <p>
+            Gustavo disse:
+            <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptates vitae tempore iusto in cumque, facilis officiis! Labore, mollitia corporis pariatur deleniti odio illo rem possimus cum, commodi debitis voluptatibus.</blockquote>
+        </p>
+        <p>E, caso queira dar uma fonte de onde foi retirado o conteúdo original, adicione <strong>cite=""</strong> após o <strong>blockquote</strong></p>
+    </ul>
+    <li><strong>Abreviações</strong></li>
+    <ul>
+        <li>Para que seja mostrado o nome inteiro de uma abreviação, ao passar o mouse por cime, use a tag &lt;abbr&gt;. Ela abrirá com o espaço para adicionar o texto e o espaço da abreviação. Ficará assim: </li>
+        <abbr title="Significa algo que eu esqueci">HTML</abbr>
+    </ul>
+</ol>
+<hr>
+
+<h2 style="text-align: center;">LISTA</h2>
+<ul>
+    <li><strong>Ordenadas:</strong> são as listas numeradas, seja com números, números romanos. Usa-se a tag <strong>&lt;ol&gt;</strong>, e, dentro, cada item deve ficar entre a tag <strong>&lt;li&gt;</strong>. </li>
+    <p>Para escolher se a lista vai ser listada com números ou letras, coloque <strong>type=""</strong> após 'ol' e indique se será a, A, i, I ou 1</p>
+    <p>Você também pode indicar em qual número ela vai começar, adicionando um <strong>start=""</strong>(OBS: o start sempre será indicado por números, mesmo que a lista esteja em type=A)</p>
+    <p><em>Exemplo:</em></p>
+    <ol>
+        <li>Pão</li>
+        <li>Manteiga</li>
+        <li>Arroz</li> <br>
+    </ol>
+
+    <li><strong>Não ordenadas:</strong> são as listas não numeradas. São indicadas com símbolos. Para escolher um simbolo, basta adicionar <strong>type=""</strong> dentro da tag e escrever uma das opções: disc(bolinha preta), circle(circulo), square(quadrado)</li>
+    <p><em>Exemplo:</em></p>
+    <ul>
+        <li>Mario Bros</li>
+        <li>The last of us</li>
+        <li>Beyond two souls</li>
+    </ul>
+</ul>
+<hr>
+
+<h2 style="text-align: center;"><strong>LINK</strong></h2>
+<p>Toda vez que você está acessando um site e clica em um local para ir para outra página, outro site ou baixar um arquivo, você está interagindo com um <em>hyperlink</em></p>
+<p>Para criar um hyperlink, iniciamos abrindo a tag <strong>&lt;a href=""&gt;&lt;/a&gt;</strong> <br> Dentro das aspas iremos colocar o link da página/site, ou o arquivo de uma página nossa, que desejamos abrir quando clicar este local. E entre os &lt;&gt; colocamos o texto(ou imagem) que deverá ser clicado.</p>
+<ul>
+    <li><strong>Target</strong></li>
+    <p>Para fcar mais prático para o Google, devemos adicionar o <strong>target=""</strong> que é um atributo que dirá aonde este link será aberto. Dentro das aspas, temos algmas opções para adicionar: <br> <strong>_blank:</strong> Faz o link abrir em outra aba <br> <strong>_self:</strong> Fa o link abrir nessa mesma aba.</p>
+    <li><strong>Rel</strong></li>
+    <p>Depois de target, adicionamos <strong>rel=""</strong> e dentro das aspas podemos colocar: <br> <strong>next</strong> Se for uma próxima parte do documento atual. <br> <strong>external</strong> Se for para outro site <br> <strong>prev</strong> Se for voltar pra página anterior <br> <strong>author</strong> Se o link for para um site do autor do artigo atual</p>
+    <p><Em>Exemplo sem imagem:</Em></p>
+    <p><a href="youtube.com">Clique aqui para abrir o youtube</a></p>
+    <p><em>Exemplo com imagem:</em></p>
+    <p><a href="youtube.com"><img src="imagens/youtube-logo-transaprente-696x392.png" alt="Logo do Youtube" width="200"></a></p>
+</ul>
+<hr>
+
+<h2 style="text-align: center;"><strong>DONWLOAD</strong></h2>
+<p>Para criar um link que efetue donwload, basta abrir a tag <strong>&lt;a href="" donwload="" type=""&gt;&lt;/a&gt;</strong></p> 
+<p>Dentro das aspas de <strong>href</strong> você insere o nome do seu arquivo, dentro das aspas de <strong>donwload</strong> você insere o nome do arquivo também, e nas aspas de <strong>type</strong> você coloca o tipo de arquivo(tabela abaixo). Pra finalizar, entre os &lt;&gt; você coloca o que vai estar escrito(ou uma imagem) para ser clicado.</p>
+<h5>Media Types</h5>
+<ul>
+    <li>application/zip</li>
+    <li>text/html</li>
+    <li>text/css</li>
+    <li>text/javascript</li>
+    <li>video/mp4</li>
+    <li>video/H264</li>
+    <li>video/JPEG</li>
+    <li>audio/mpeg</li>
+    <li>font/tff</li>
+    <li>image/jpeg</li>
+    <li>image/png</li>
+</ul>
+<p><em>Exemplo:</em></p>
+<a href="midia/heatweaves.zip" download="heatweaves" type="application/zip">Clique aqui para baixar Heat Weaves para <strong>zip</strong></a>
+<hr>
+
+<h2 style="text-align: center;"><strong>AUDIO</strong></h2>
+<p>Para adicionar um áudio, basa abrir a tag <strong>&lt;audio preload=""&gt;</strong></p>
+<p>O atributo <strong>preload</strong> indica se o áudio será pre carregado ou não e aceita três valores:</p>
+<ul>
+    <li><strong>metadata</strong> Carrega apenas as informações sobre o arquivo</li>
+    <li><strong>none</strong> Não carrega nada até o usuário apertar o botão de play</li>
+    <li><strong>auto</strong> Vai carregar o arquivo inteiro assim que a página for carregada, mesmo que o usuário não aperte o play.</li>
+</ul>
+<p>Podemos, depois do <strong>preload</strong>, adicionar o atributo <strong>controls</strong>, que seria o player. Caso não seja adicionado, o usuário não pode interagir com ele.</p>
+<p>Também podemos adicionar o <strong>autplay</strong> que inicia o áudio assim que a página for carregada.</p>
+<p>Também temos o atributo <strong>loop</strong> que mantém o áudio tocando repetidamente.</p>
+<p>Após enfeitar a tag, devemos, entre ela, abrir a tag <strong>&lt;source src="" type=""&gt;</strong> <br> Nas aspas de <strong>src</strong> colocamos o nome do arquivo. <br> Nas aspas de <strong>type</strong> colocamos a <em>media type</em></p>
+<p><Em>Diferente da tag <strong>picture</strong>, vai fncionar de cima para baixo tentando o próximo recurso se o atual não funcionar. </Em></p>
+
+<audio preload="metadata" controls>
+    <source src="midia/heatweaves.mp3" type="audio/mpeg">
+</audio>
+<hr>
+
+<h2 style="text-align: center;"><strong>VÍDEOS</strong></h2>
+<ol>
+    <li><strong>Hospedando próprios vídeos (não recomendável. Muito caro)</strong></li>
+    <UL>
+        <li>Para inserir um video no site, abrir a tag <strong>&lt;video&gt;</strong>, caso o arquivo esteja hospedado no nosso próprio servidor. </li>
+        <li>Dentro da tag, podemos utilizar atributos iguais os do audio, como o <strong>autoplay</strong> e o <strong>controls</strong>(muito importante para o usuário poder interagir com o vídeo.)</li>
+        <li>Dentro da tag podemos escolher o tamanho com o atributo <strong>width</strong> e escolher uma tumb com o atributo <strong>poster</strong></li>
+        <li>Com a tag aberta, colocamos <strong>&lt;source src="" type=""&gt;</strong> <br> Nas aspas do src adicionamos o arquivo. <br> Nas aspas do type adicionamos o media type.</li>
+        <li>Podemos colocar vários source como na imagem e no audio. ASsim o navegador tem vários possibilidades de carregar o vídeo. </li>
+        <li><strong>Navegador vs Arquivos compatíveis.</strong> <br> Microsoft Edge - .mp4 .m4v <br> Apple Safari - .mp4 .m4v <br> Google Chrome - .mp4 .m4v .webm .ogv <br> Mozilla Firefox - .webm .ogv <br> Opera - .webm .ogv</li>
+    </UL>
+    <li><strong>Hospedando video do Youtube ou Vimeo</strong></li>
+    <ul>
+        <li>De forma mais eficaz e mais barata, você pode simplesmente entrar em um video do Youtube/Vimeo, ir em compartilhar, clicar em <strong>incorporar</strong>, e copiar o código e colar no seu programa. </li>
+    </ul>
+</ol>
+<hr>
+
+<h2 style="text-align: center;"><strong>CSS ESTILOS</strong></h2>
+<ol>
+    <li><strong>Inline</strong></li>
+    <ul>
+        <li>Esta é a maneira meno prática porém serve para ocasiões especificas. Você pode ir de linha em linha modificando o estilo. Basta abrir, dentro de alguma tag, o <strong>&lt;style&gt;</strong>. Dentro dele, você pode modificar posição. tamanho, cor, marca-texto, cor de fundo etc.</li>
+    </ul>
+    <li><strong>Internal</strong></li>
+    <ul>
+        <li>Para ficar mais organizado e um pouco mais prático, caso queira mudanças em toda a página, abriremos a tag <strong>&lt;/style&gt;</strong> dentro da <strong>head</strong> e colocamos tudo o que queremos modificat. <br> <em>Exemplo:</em> caso queira modificar o fundo para azul, coloque <strong>body {blackground-color: blue;}</strong>. <br> Caso queira modificar todos os h1, ponha <strong>h1 {color: blue;}</strong></li>
+    </ul>
+    <li><strong>Alguns códigos</strong></li>
+    <ul>
+        <li><strong>Mudar fonte: </strong> style="font-family: (nome da fonte);"</li>
+        <li><strong>Mudar tamanho da fonte: </strong> style="font-size: (tamanho)px"</li>
+        <li><strong>Mudar cor de um titulo ou paragrafo: </strong> style="color: (cor desejada);"</li>
+        <li><strong>Deixar as letras mais espaçadas: </strong> style="text-align: justify"</li>
+        <li><strong>Mudar a direção do título/parágrafo: </strong> style="text-align: (center, right ou left);"</li>
+    </ul>
+</ol>
+
+
+
+
+
+
+</body>
+</html>
