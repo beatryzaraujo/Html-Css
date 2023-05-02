@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 400px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        td, th {
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        thead, tfoot {
+            background-color: grey;
+            color: white;
+            text-shadow: 1px 0px 0px black;
+        }
+
+        #vencedor {
+            color: gold;
+            text-shadow: 0px 0px 0px black;
+        }
+
+        #perdedor {
+            color: red;
+            text-shadow: 0px 0px 0px black;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: grey;
+        }
+
+        #container {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <table>
+            <caption>Notas no Relacionamento</caption>
+            <thead>
+                <tr>
+                    <th>Grupo</th>
+                    <th>Nome</th>
+                    <th>Aparência</th>
+                    <th>Beijo</th>
+                    <th>Oral</th>
+                    <th>Sexo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="vencedor">
+                    <th>Vencedor</th>
+                    <td>André</td>
+                    <td>100/10</td>
+                    <td>100/10</td>
+                    <td>100/10</td>
+                    <td>100/10</td>
+                </tr>
+                <tr>
+                    <th rowspan="6">Mulher</th>
+                    <td>Maria</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                </tr>
+                <tr>
+                    <td>Mariana</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                </tr>
+                <tr>
+                    <td>Rafaela</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                </tr>
+                <tr>
+                    <td>Gabriela</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                </tr>
+                <tr>
+                    <td>Alessandra</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                </tr>
+                <tr>
+                    <td>Roberta</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                </tr>
+                <tr>
+                    <th rowspan="5">Homem</th>
+                    <td>Luiz</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                </tr>
+                <tr>
+                    <td>João</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                </tr>
+                <tr>
+                    <td>Paulo</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                </tr>
+                <tr>
+                    <td>Pedro</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                </tr>
+                <tr>
+                    <td>Matheus</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                    <td>00/10</td>
+                </tr>
+                <tr id="perdedor">
+                    <th>Perdedor</th>
+                    <td>Enrike</td>
+                    <td>-999/10</td>
+                    <td>-999/10</td>
+                    <td>-999/10</td>
+                    <td>-999/10</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="5">Total de pessoas melhores que meu xuxu</th>
+                    <td>00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis sit delectus error laborum reiciendis eos molestiae ipsam, odit et cum porro officia illum sed perferendis veniam tenetur quod, cumque placeat!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore assumenda autem perferendis! Dolorem, beatae temporibus maxime nostrum dolor numquam quaerat et officiis eaque architecto explicabo iure illum error nihil officia! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad esse vel, doloremque provident fugit recusandae omnis impedit voluptatum mollitia sunt iusto quia necessitatibus pariatur aliquam, autem, aliquid soluta quae dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis ut modi ducimus in veniam necessitatibus eaque dolores aliquid! Enim asperiores a reiciendis nam aliquid veniam necessitatibus consequatur corporis ut? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, repudiandae praesentium? Doloribus nulla ratione sequi consectetur qui, modi blanditiis quisquam est dolores accusantium, dignissimos porro, enim quod? Reiciendis, quia consectetur? lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, perferendis! Natus suscipit culpa esse sequi cupiditate voluptatibus autem, nesciunt dolorem assumenda. Temporibus, nobis quaerat ipsa facere commodi sed beatae sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum asperiores fuga maiores natus quidem, porro totam labore hic doloribus repudiandae impedit accusantium, reprehenderit perspiciatis nobis dicta enim voluptatibus. Architecto, dolorum!  Natus suscipit culpa esse sequi cupiditate voluptatibus autem, nesciunt dolorem assumenda. Temporibus, nobis quaerat ipsa facere commodi sed beatae sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum asperiores fuga maiores natus quidem, porro totam labore hic doloribus repudiandae impedit accusantium, reprehenderit perspiciatis nobis dicta enim voluptatibus. Architecto, dolorum! Natus suscipit culpa esse sequi cupiditate voluptatibus autem, nesciunt dolorem assumenda. Temporibus, nobis quaerat ipsa facere commodi sed beatae sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum asperiores fuga maiores natus quidem, porro totam labore hic doloribus repudiandae impedit accusantium, reprehenderit perspiciatis nobis dicta enim voluptatibus. Architecto, dolorum!  Natus suscipit culpa esse sequi cupiditate voluptatibus autem, nesciunt dolorem assumenda. Temporibus, nobis quaerat ipsa facere commodi sed beatae sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum asperiores fuga maiores natus quidem, porro totam labore hic doloribus repudiandae impedit accusantium, reprehenderit perspiciatis nobis dicta enim voluptatibus. Architecto, dolorum!  Natus suscipit culpa esse sequi cupiditate voluptatibus autem, nesciunt dolorem assumenda. Temporibus, nobis quaerat ipsa facere commodi sed beatae sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum asperiores fuga maiores natus quidem, porro totam labore hic doloribus repudiandae impedit accusantium, reprehenderit perspiciatis nobis dicta enim voluptatibus. Architecto, dolorum!
+    </p>
+</body>
+</html>

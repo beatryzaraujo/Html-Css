@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        caption {
+            font-size: 1.4em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        thead, tfoot {
+            background-color: grey;
+            color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: grey;
+        }
+
+        tbody > tr:nth-child(2n) {
+            /* Essa Pseudo clase (:nth-child(2n) defini que aqui dentro será feito o estilo de duas em duas linhas. Se você aumentar 2n para 3n, ficará de três em três linhas e assim por diante) Dentro desse parenteses, você também pode colocar "odd" para definir o estilo somente das células ímpares, e "even" para as céululas pares */
+            background-color: lightgray;
+        }
+
+        td.numero {
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Uso de Tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        Table 
+            Caption(legenda)
+            THead
+            (TR, TD, TH)
+                TBody
+                (TR, TD, TH)
+                    TFoot
+                    (TR, TD, TH)
+
+    Também usamos a tag "scope" para definir se os dados do título estão na mesma coluna ou na mesma linha. Por exemplo, nessa tabela, temos o título Estados que segue seus dados na mesma coluna, tal qual população. Já o título Total de Habitantes, seu dado está na mesma linha. 
+    mesma coluna: scope="col"
+    mesma linha: scope="row"
+    -->
+
+    <table>
+        <caption>População das cidades federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px">População</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="numero">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="numero">21.190.384</td>
+            </tr>
+
+            <tr> 
+                <td>Rio de Janeiro</td>
+                <td class="numero">32.489.320</td>
+            </tr>
+
+            
+        </tbody> 
+
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="numero"><strong>438.439.234</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quae natus architecto, fuga corporis voluptatum quia, eos vitae quaerat consequuntur et qui soluta doloribus ex, impedit distinctio voluptate errorLorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque nesciunt nisi quam asperiores impedit id explicabo consequatur, porro labore dignissimos laboriosam blanditiis et unde quia culpa soluta tempore temporibus?></p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quae natus architecto, fuga corporis voluptatum quia, eos vitae quaerat consequuntur et qui soluta doloribus ex, impedit distinctio voluptate errorLorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque nesciunt nisi quam asperiores impedit id explicabo consequatur, porro labore dignissimos laboriosam blanditiis et unde quia culpa soluta tempore temporibus?></p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quae natus architecto, fuga corporis voluptatum quia, eos vitae quaerat consequuntur et qui soluta doloribus ex, impedit distinctio voluptate errorLorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque nesciunt nisi quam asperiores impedit id explicabo consequatur, porro labore dignissimos laboriosam blanditiis et unde quia culpa soluta tempore temporibus?></p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quae natus architecto, fuga corporis voluptatum quia, eos vitae quaerat consequuntur et qui soluta doloribus ex, impedit distinctio voluptate errorLorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque nesciunt nisi quam asperiores impedit id explicabo consequatur, porro labore dignissimos laboriosam blanditiis et unde quia culpa soluta tempore temporibus?></p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quae natus architecto, fuga corporis voluptatum quia, eos vitae quaerat consequuntur et qui soluta doloribus ex, impedit distinctio voluptate errorLorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque nesciunt nisi quam asperiores impedit id explicabo consequatur, porro labore dignissimos laboriosam blanditiis et unde quia culpa soluta tempore temporibus?></p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quae natus architecto, fuga corporis voluptatum quia, eos vitae quaerat consequuntur et qui soluta doloribus ex, impedit distinctio voluptate errorLorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque nesciunt nisi quam asperiores impedit id explicabo consequatur, porro labore dignissimos laboriosam blanditiis et unde quia culpa soluta tempore temporibus?></p>
+
+</body>
+</html>
