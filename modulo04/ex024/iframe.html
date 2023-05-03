@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de iframe</title>
+    <style>
+        
+        iframe {
+            width: 400px;
+            height: 400px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--tamanho padrão de 300x150-->
+    <!--o tamanho de prioridade é o feito no css-->
+    <!--scolling dita se o site vai rolar caso precise(auto), rolar de qualquer jeito(yes), ou não rolar(no). Porém, no Google do Windows, tem rolado independente se você colocar o scolling-->
+    <!--frameborder aceita o "0" para não criar  borda, ou qualquer outro número para criar uma borda de 1px. Para personalizar essa borda, basta mexer no css-->
+    <h1>Testando o uso de um iframe</h1>
+    <p>
+        Acessando o site do 
+        
+       <iframe src="https://www.cursoemvideo.com" frameborder="0"  height="500" scolling="auto"></iframe>
+
+    para aprender a programar</p>
+
+    <p>O site do <iframe src="https:www.google.com" frameborder="0"> <a href="https://www.google.com" target="_blank">Google</a>
+    </iframe> é muito legal, pena que não funciona dentro do iframe</p>
+
+    <p>
+        O repositório do Guanabara 
+   
+        <iframe src="https://gustavoguanabara.github.io" frameborder="0"></iframe>
+
+        também é bem legal
+    </p>
+</body>
+</html>

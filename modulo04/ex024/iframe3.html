@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframe</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe {
+            width: 95vw;
+            border: 2px solid black;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi voluptate delectus sint nulla, aperiam cumque qui debitis quidem maxime maiores aliquam voluptatibus! Cupiditate nulla modi enim animi ad labore. lorem</p>
+
+    <ul>
+        <li><a href="paginas-extras/pagin01.html" target="frame" >Primeira página</a></li>
+        <li><a href="paginas-extras/pagin02.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas-extras/pagin03.html" target="frame">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis soluta iste alias laborum sunt qui autem, culpa, quas mollitia, perspiciatis officiis corrupti provident suscipit obcaecati laudantium rerum! Eius, itaque quia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. A nam enim ducimus veritatis voluptatibus ipsum. Illum minima nostrum dicta cupiditate minus obcaecati ipsum nam expedita aspernatur, numquam laboriosam inventore dignissimos!</p>
+    <!--Perceba que dentro do iframe, ao inves de ter SRC, tem SRCDOC, é um parâmetro que permite colocar html dentro do iframe para que já inicie a página com algo escrito :)-->
+    <iframe name="frame" srcdoc="<h1> Escolha uma das opções acima</h1> <p>Loreabsdnasdk kn fafasdk aoawd asdkaf   fajs fkjkf jaja  jadksd k ajfj k </p> <img src='imagens/andreeeu.jpg'>">
+        <p>Infelizmente seu navegador não é compatível com isso.</p>
+    </iframe>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam illo dolor illum, laudantium quaerat, quos nobis aliquid ut deserunt quam nemo in quis, temporibus expedita similique eaque perferendis quas facilis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem facilis dolor iusto nihil architecto earum unde odit recusandae eos voluptate aperiam reiciendis est debitis alias, officiis rerum nobis dolores eius?</p>
+</body>
+</html>
