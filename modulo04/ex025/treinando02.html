@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Treinando Formulário</h1>
+    <form action="cadastro.php" method="post">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <input type="radio" name="sexo" id="isxmasc" value="M">
+                <label for="isxmasc">Masculino</label>
+
+                <input type="radio" name="sexo" id="isxfem" value="F">
+                <label for="isxfem">Feminino</label>
+
+                <input type="radio" name="sexo" id="isxout" checked>
+                <label for="isxout">Outro</label>
+            </p>
+
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" required minlength="5" maxlength="20" size="15">
+            </p>
+
+            <p>
+                <label for="isobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="isobrenome" required minlength="5" maxlength="20" size="15">
+            </p>
+
+            <p>
+                <label for="idata">Data de Nascimento</label>
+                <input type="date" name="data" id="idata" required>
+            </p>
+
+            <p>
+                <label for="ihora">Hora de Nascimento</label>
+                <input type="time" name="hora" id="ihora" required>
+            </p>
+
+            <p>
+                <label for="icpf">CPF</label>
+                <input type="number" name="cpf" id="icpf" required placeholder="xxx.xxx.xxx-x">
+            </p>
+
+            <p>
+                <label for="iprofissao">Profissão</label>
+                <input type="text" name="profissao" id="iprofissao" list="iprof" required size="15">
+                <datalist id="iprof">
+                    <option>Professora</option>
+                    <option>Médico</option>
+                    <option>Programador</option>
+                </datalist>
+            </p>
+
+            <p>
+                <label for="iestado">Estado</label>
+                <input type="text" name="estado" id="iestado" list="lstestado" required size="15">
+                <datalist id="lstestado">
+                    <option>Rio de Janeiro</option>
+                    <option>São Paulo</option>
+                    <option>Minas Gerais</option>
+                </datalist>
+            </p>
+
+            <p>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" required size="10" placeholder="(xx) xxxxx-xxxx">
+            </p>
+
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" required size="15">
+            </p>
+
+            <p>
+                <label for="isat">Nível de Satisfação com o Site</label>
+                <input type="range" name="sat" id="isat" required min="1" max="10" value="1">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cor Favorita</legend>
+            <p>
+                <label for="icor1">Cor 1</label>
+                <input type="color" name="cor1" id="icor1" required>
+            </p>
+            <p>
+                <label for="icor2">Cor 2</label>
+                <input type="color" name="cor2" id="icor2" required>
+            </p>
+            <p>
+                <label for="icor3">Cor 3</label>
+                <input type="color" name="cor3" id="icor3" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Esporte Favorito</legend>
+            <input type="checkbox" name="fut" id="ifut">
+            <label for="ifut">Futebol</label>
+
+            <input type="checkbox" name="vol" id="ivol">
+            <label for="ivol">Vôlei</label>
+
+            <input type="checkbox" name="tenis" id="itenis">
+            <label for="itenis">Tênis</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cadastro</legend>
+            <p>
+                <label for="iusu">Usuário</label>
+                <input type="text" name="usu" id="iusu" required minlength="5" maxlength="20" size="15">
+            </p>
+            <p>
+                <label for="isenha">Senha</label>
+                <input type="password" name="senha" id="isenha" required minlength="8" maxlength="20" size="15">
+            </p>
+            <p>
+                <label for="ifoto">Foto do Perfil</label>
+                <input type="file" name="foto" id="ifoto">
+            </p>
+        </fieldset>
+
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: rgb(243, 14, 52);
+        }
+        legend {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: rgb(196, 10, 41);;
+            font-weight: bold;
+        }
+
+        body {
+            background-color: rgb(255, 208, 216);
+        }
+
+        fieldset {
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Treinando Formulários</h1>
+    <form action="cadastro.php" method="get">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            
+            <p>
+                <input type="radio" name="sexo" id="isxmasc" value="M">
+                <label for="isxmasc">Masculino</label> 
+                
+                <input type="radio" name="sexo" id="isxfem" value="F">
+                <label for="isxfem">Feminino</label>
+            </p>
+
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" required minlength="5" maxlength="20" placeholder="Primeiro Nome" size="13">
+            </p>
+
+            <p>
+                <label for="isobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="isobrenome" required minlength="5" maxlength="30" size="17">
+            </p>
+
+            <p>
+                <label for="idata">Data de Nascimento</label>
+                <input type="date" name="data" id="idata">
+            </p>
+
+            <p>
+                <label for="ihora">Hora do Nascimento</label>
+                <input type="time" name="hora" id="ihora">
+            </p>
+            
+            <p>
+                <label for="icpf">CPF</label>
+                <input type="number" name="cpf" id="icpf" required placeholder="xxx.xxx.xxx-xx">
+            </p>
+
+            <p>
+                <label for="iestado">Estado</label>
+                <select name="estado" id="iested">
+                    <option value="" selected disabled>---Escolha---</option>
+
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="iano">Em que ano você nasceu</label>
+                <input type="number" name="ano" id="iano" min="1900" max="2023" oninput="CalcIdade()">
+            </p>
+
+            <p>
+                <label for="iidade">Sua idade atual é</label>
+                <output id="iidade">0</output>
+            </p>
+
+            <p>
+                <label for="iprof">Profissão</label>
+                <input type="text" name="prof" id="iprof" list="lstprof">
+                <datalist id="lstprof">
+                    <option>Professor(a)</option>
+                    <option>Contador(a)</option>
+                    <option>Programador(a)</option>
+                    <option>Advogado(a)</option>
+                </datalist>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados de Contato</legend>
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" required minlength="5" maxlength="30">
+            </p>
+            <p>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" placeholder="(xx)xxxx-xxxx" size="10" autocomplete="tel" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Sobre mim</legend>
+            <p>
+                <label for="icor">Cor Favorita</label>
+                <input type="color" name="cor" id="icor" required>
+            </p>
+
+            <label for="">Esporte Favorito</label> <br>
+            <input type="checkbox" name="espfut" id="iespfut">
+            <label for="iespfut">Futebol</label> <br>
+            <input type="checkbox" name="espvolei" id="iespvolei">
+            <label for="iespvolei">Vôlei</label> <br>
+            <input type="checkbox" name="esptenis" id="iesptenis">
+            <label for="iesptenis">Tênis</label>
+
+            <p>
+                <label for="isats">Nível de Satisfação com o Site</label>
+                <input type="range" name="sats" id="isats" min="1" max="10" value="1">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <p>
+                <label for="ifoto">Foto de Perfil</label>
+                <input type="file" name="foto" id="ifoto" required>
+            </p>
+
+            <p>
+                <label for="iusu">Usuário</label>
+                <input type="text" name="usu" id="iusu" maxlength="20" minlength="5" size="13" required>
+            </p>
+
+            <p>
+                <label for="isenha">Senha</label>
+                <input type="password" name="senha" id="isenha" minlength="8" maxlength="20" size="13" required>
+            </p>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <script>
+        function CalcIdade() {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
+
+</body>
+</html>
